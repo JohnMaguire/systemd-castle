@@ -1,7 +1,0 @@
-[Unit]
-Description=Updates DigitalOcean DNS with dynamic IP address
-
-[Service]
-Type=oneshot
-ExecStart=/home/jmaguire/.local/sbin/dynamic-dns.sh
-RemainAfterExit=yes
