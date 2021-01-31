@@ -4,8 +4,8 @@ Description=Weechat IRC Client (in tmux)
 [Service]
 Type=oneshot
 RemainAfterExit=yes
-ExecStart=/usr/bin/tmux -2 new-session -d -s irc /usr/bin/weechat
-ExecStop=/usr/bin/tmux kill-session -t irc
+ExecStart=%h/.tmux/irc-session.sh start
+ExecStop=%h/.tmux/irc-session.sh stop
 
 [Install]
 WantedBy=default.target
